@@ -1,0 +1,50 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+
+
+<web-app>
+
+
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <!--取别名  -->
+    <servlet-name>myServlet</servlet-name>
+    <!--servlet的类全名  -->
+    <servlet-class>com.aistar.controller.MyServlet</servlet-class>
+
+    <!--<load-on-startup>1</load-on-startup>-->
+  </servlet>
+  <servlet>
+    <servlet-name>ResumeGetAllServlet</servlet-name>
+    <servlet-class>com.aistar.controller.ResumeGetAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResumeModifyServlet</servlet-name>
+    <servlet-class>com.aistar.controller.ResumeModifyServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ResumeGetAllServlet</servlet-name>
+    <url-pattern>/resume/getall</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResumeModifyServlet</servlet-name>
+    <url-pattern>/resume/modify</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>myServlet</servlet-name>
+    <!-- 必须以"/"开头，
+    给外部访问的虚拟路径/ 动态路径 -->
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+</web-app>
